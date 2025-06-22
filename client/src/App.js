@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import "./App.css";
 
 const capitalizeWords = (str) =>
@@ -22,6 +22,14 @@ function App() {
     const localTime = new Date(utcTime + timezoneOffset * 1000);
     return localTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
   };
+  
+  const inputRef = useRef();
+
+  useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, []);
 
   const getWeather = async (selectedCity) => {
   try {
@@ -41,7 +49,7 @@ function App() {
 
     // ✅ Fetch and process forecast
     const forecastRes = await fetch(
-      `http://https://weather-app-ivux.onrender.com/api/weather/forecast?city=${encodeURIComponent(selectedCity)}`
+      `https://weather-app-ivux.onrender.com/api/weather/forecast?city=${encodeURIComponent(selectedCity)}`
     );
     const forecastData = await forecastRes.json();
 
@@ -143,9 +151,11 @@ function App() {
           <input
             type="text"
             value={city}
-            onChange={handleInputChange}
+            onChange={handleInputChange} 
             onKeyDown={handleKeyDown}
-            placeholder="Enter city"
+            placeholder="Enter city..."
+            ref={inputRef}
+            className="your-input-class"
           />
           {suggestions.length > 0 && (
             <ul className="suggestions">
