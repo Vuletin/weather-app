@@ -26,7 +26,7 @@ function App() {
   const getWeather = async (selectedCity) => {
   try {
     const response = await fetch(
-      `http://localhost:5000/api/weather?city=${encodeURIComponent(selectedCity)}`
+      `https://weather-app-ivux.onrender.com/api/weather?city=${encodeURIComponent(selectedCity)}`
     );
     const data = await response.json();
 
@@ -41,7 +41,7 @@ function App() {
 
     // ✅ Fetch and process forecast
     const forecastRes = await fetch(
-      `http://localhost:5000/api/weather/forecast?city=${encodeURIComponent(selectedCity)}`
+      `http://https://weather-app-ivux.onrender.com/api/weather/forecast?city=${encodeURIComponent(selectedCity)}`
     );
     const forecastData = await forecastRes.json();
 
@@ -59,7 +59,7 @@ function App() {
     }
 
     // ✅ Fetch history
-    const historyRes = await fetch("http://localhost:5000/api/weather/history");
+    const historyRes = await fetch("https://weather-app-ivux.onrender.com/api/weather/history");
     const historyData = await historyRes.json();
     setHistory(historyData);
 

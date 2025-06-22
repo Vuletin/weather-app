@@ -45,7 +45,7 @@ router.get("/", async (req, res) => {
             icon,
             searchedAt: new Date(),
             timezone: data.timezone
-          },
+          }
         },
         { upsert: true }
       );
