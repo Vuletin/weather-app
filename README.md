@@ -98,8 +98,7 @@ npm run deploy
 
 ## 📹 Video Demo
 
-*A short video walkthrough will be added soon.*
-
+https://youtu.be/jdruHSkx41k
 ---
 
 ## 🙋‍♂️ Author
