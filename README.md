@@ -1,74 +1,110 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+# Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack MERN (MongoDB, Express, React, Node.js) weather application that allows users to get real-time weather data for any city, view a 5-day forecast, and track recent searches. The app also features autosuggestions for cities and displays local time based on the city's timezone.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🌐 Live Demo
 
-### `npm start`
+* **Frontend:** [vuletin.github.io/weather-app](https://vuletin.github.io/weather-app)
+* **Backend (API):** [weather-app-ivux.onrender.com](https://weather-app-ivux.onrender.com)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ✨ Features
 
-### `npm test`
+* 🔍 **City Autosuggestions** as you type (powered by GeoDB API)
+* ⌨️ **Autofocus** on the search bar for quick typing
+* 🌤️ **Real-time Weather Info** including:
+  * Temperature
+  * Wind speed
+  * Weather type (e.g. light rain, clear sky)
+  * Weather icon
+  
+* 🕒 **Local Time Display** based on the city’s timezone
+* 📅 **5-Day Forecast** with daily temperature and icons
+* 🔁 **Recent Searches** stored in MongoDB and displayed with temp, icon, and timestamp
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## ⚙️ Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* **Frontend:** React
+* **Backend:** Node.js + Express
+* **Database:** MongoDB Atlas
+* **APIs:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  * [OpenWeatherMap](https://openweathermap.org/current)
+  * [GeoDB Cities API](https://rapidapi.com/wirefreethought/api/geodb-cities)
+* **Deployment:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  * Frontend: GitHub Pages
+  * Backend: Render
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🚀 Setup Instructions
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 1. Clone the repo
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+git clone https://github.com/Vuletin/weather-app.git
+cd weather-app
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 2. Set up environment variables
 
-## Learn More
+Create `.env` files in:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* `server/.env`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```env
+MONGO_URI=your_mongodb_uri
+OPENWEATHER_API_KEY=your_openweather_key
+```
 
-### Code Splitting
+* `client/.env`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```env
+REACT_APP_WEATHER_API_KEY=your_openweather_key
+REACT_APP_GEODB_API_KEY=your_geodb_key
+```
 
-### Analyzing the Bundle Size
+### 3. Install dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm install
+cd client && npm install
+cd ../server && npm install
+```
 
-### Making a Progressive Web App
+### 4. Run the app locally
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+npm run dev
+```
 
-### Advanced Configuration
+### 5. Deploy
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* Backend to Render
+* Frontend with:
 
-### Deployment
+```bash
+cd client
+npm run deploy
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 📹 Video Demo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# weather-app
->>>>>>> bfd655b47715bf9580bc0513f88e962a9e6abebf
+*A short video walkthrough will be added soon.*
+
+---
+
+## 🙋‍♂️ Author
+
+**Sava Vuletin**
+Programmer from Serbia, passionate about building useful full-stack apps.
+
+GitHub: [@Vuletin](https://github.com/Vuletin)
