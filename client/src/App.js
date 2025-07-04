@@ -6,8 +6,8 @@ const capitalizeWords = (str) =>
     .toLowerCase()
     .replace(/\b\w/g, (char) => char.toUpperCase());
 
-const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
 const geoKey = process.env.REACT_APP_GEODB_API_KEY;
+const BASE_URL = process.env.REACT_APP_API_URL;
 
 function App() {
   const [forecast, setForecast] = useState([]);
@@ -34,8 +34,9 @@ function App() {
   const getWeather = async (selectedCity) => {
   try {
     const response = await fetch(
-      `https://weather-app-ivux.onrender.com/api/weather?city=${encodeURIComponent(selectedCity)}`
+      `${BASE_URL}/api/weather?city=${encodeURIComponent(selectedCity)}`
     );
+
     const data = await response.json();
 
     if (!response.ok || data.cod !== 200) {
@@ -49,7 +50,7 @@ function App() {
 
     // ✅ Fetch and process forecast
     const forecastRes = await fetch(
-      `https://weather-app-ivux.onrender.com/api/weather/forecast?city=${encodeURIComponent(selectedCity)}`
+      `${BASE_URL}/api/weather/forecast?city=${encodeURIComponent(selectedCity)}`
     );
     const forecastData = await forecastRes.json();
 
@@ -67,7 +68,7 @@ function App() {
     }
 
     // ✅ Fetch history
-    const historyRes = await fetch("https://weather-app-ivux.onrender.com/api/weather/history");
+    const historyRes = await fetch(`${BASE_URL}/api/weather/history?city=${encodeURIComponent(selectedCity)}`);
     const historyData = await historyRes.json();
     setHistory(historyData);
 

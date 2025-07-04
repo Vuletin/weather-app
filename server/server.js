@@ -25,7 +25,7 @@ const startServer = async () => {
       useNewUrlParser: true,
       useUnifiedTopology: true
     });
-
+    
     console.log("✅ MongoDB connected");
     app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
   } catch (err) {
