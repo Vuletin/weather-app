@@ -78,6 +78,8 @@ function App() {
 };
 
   const fetchSuggestions = async (query) => {
+    console.log("GeoDB API Key:", geoKey);
+
     if (!query.trim() || query.length < 2) {
       setSuggestions([]);
       return;
