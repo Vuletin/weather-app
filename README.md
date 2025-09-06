@@ -7,7 +7,7 @@ A full-stack MERN (MongoDB, Express, React, Node.js) weather application that al
 ## 🌐 Live Demo
 
 * **Test the app yourself::** [vuletin.github.io/weather-app](https://vuletin.github.io/weather-app)
-   ⚠ It's running on free hosting so wait 30 sec to load
+* **⚠ It's running on free hosting so wait 30 sec to load
 
 ---
 
@@ -33,8 +33,8 @@ A full-stack MERN (MongoDB, Express, React, Node.js) weather application that al
 * **Backend:** Node.js + Express
 * **Database:** MongoDB Atlas
 * **APIs:**
- * OpenWeatherMap
- * GeoDB Cities API
+    * OpenWeatherMap
+    * GeoDB Cities API
 
 * **Deployment:**
 
