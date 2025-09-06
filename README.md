@@ -33,9 +33,9 @@ A full-stack MERN (MongoDB, Express, React, Node.js) weather application that al
 * **Backend:** Node.js + Express
 * **Database:** MongoDB Atlas
 * **APIs:**
+  * **Test the app yourself: [OpenWeatherMap](https://openweathermap.org/current)
+  * ⚠ It's running on free hosting so wait 30 sec to load
 
-  * [OpenWeatherMap](https://openweathermap.org/current)
-  * [GeoDB Cities API](https://rapidapi.com/wirefreethought/api/geodb-cities)
 * **Deployment:**
 
   * Frontend: GitHub Pages
